@@ -116,6 +116,10 @@
     <None Include="Resources\images\cardsBoard.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Resources\sounds\Sad_Trombone-Joe_Lamb-665429450.wav" />
+    <None Include="Resources\sounds\Metal Clang-SoundBible.com-19572601.wav" />
+    <None Include="Resources\sounds\Slap-SoundMaster13-49669815.wav" />
+    <None Include="Resources\sounds\Metal_Gong-Dianakc-109711828.wav" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />

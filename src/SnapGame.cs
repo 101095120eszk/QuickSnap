@@ -24,6 +24,22 @@ namespace CardGames
 
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE)) {
 				myGame.Start ();
+				myGame.FlipNextCard ();
+			}
+
+			if (myGame.IsStarted) {
+				if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT) && SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) {
+					SwinGame.LoadSoundEffectNamed ("Error", "Sad_Trombone-Joe_Lamb-665429450.wav");
+					SwinGame.PlaySoundEffect ("Error");
+				} else if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT)) {
+					myGame.PlayerHit (0);
+					SwinGame.LoadSoundEffectNamed ("Slap", "Slap-Soundmaster13-49669815.wav");
+					SwinGame.PlaySoundEffect ("Slap");
+				} else if (SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) {
+					myGame.PlayerHit (1);
+					SwinGame.LoadSoundEffectNamed ("Clang", "Metal Clang-SoundBible.com-19572601.wav");
+					SwinGame.PlaySoundEffect ("Clang");
+				}
 			}
 		}
 
